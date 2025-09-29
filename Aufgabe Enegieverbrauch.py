@@ -1,0 +1,7 @@
+Fernseher=(3*1*3*365)
+Herd=(1*2*2*365) 
+TelRouRe=(2*4*365) 
+Heizung=(8*20*170)
+kWh=(Fernseher+Herd+TelRouRe+Heizung)
+Preis=float(0.3) 
+print(kWh*Preis) 
