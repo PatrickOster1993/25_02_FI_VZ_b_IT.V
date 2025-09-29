@@ -1,1 +1,4 @@
-Das sind meine eigenen Notizen!
+Das sind meine eigenen Notizen:
+- Schülern git beibringen
+- Erdal glücklich machen
+- ...
