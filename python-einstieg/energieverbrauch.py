@@ -5,3 +5,4 @@ heizung=20*8*170
 kosten=(fernseher+herd+heizung+rechnerroutertelefon)*0.3
 verbrauch=fernseher+herd+heizung+rechnerroutertelefon
 print(f"Der Verbrauch pro Jahr beträgt {verbrauch} kWh und die Kosten liegen bei {kosten} € ")
+print("Der Verbrauch pro Jahr beträgt",verbrauch,"kWh und die Kosten liegen bei",kosten, "€")
