@@ -13,8 +13,8 @@ def drucke_produkt_info(produkt):
 
 def berechne_gesamtlagerwert(lager_liste):
     """
-    Berechnet den Gesamtwert des Lagers ohne eine for-Schleife
-    durch manuellen Zugriff auf die ersten drei Listenelemente.
+    Berechnet den Gesamtwert des Lagers
+    durch ersten drei Listenelemente.
     """
     gesamtwert = 0
     fester_preis = 75  # Fester Preis in Euro
