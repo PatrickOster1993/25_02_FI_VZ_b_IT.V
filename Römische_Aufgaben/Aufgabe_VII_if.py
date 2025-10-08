@@ -1,38 +1,43 @@
-Zimmerpreis=float(input("Wie teuer ist das Zimmer?"))
-Kinder=int(input("Wieviele Kinder kommen mit (Alter 0-18 Jahre?  "))
-Erwachsene=int(input("Wieviele Erwachsene (über 18 Jahren) kommen mit?"))
-KinderListe=[]
-rabatt_pro_kind = []  # Liste für individuellen Rabatt je Kind
+Zimmerpreis = float(input("Wie teuer ist das Zimmer? "))
+Erwachsene = int(input("Wie viele Erwachsene (über 18 Jahre) kommen mit? "))
+Kinder = int(input("Wie viele Kinder kommen mit (0-18 Jahre)? "))
+aufenthalt = int(input("Wie viele Nächte möchten Sie bleiben? "))
 
-if Kinder == int(1):
-    AlterKind=int(input("Wie alt ist ihr Kind?"))
-    if AlterKind > 7:
-        rabatt= 100
+rabatt_pro_kind = []
+Kinderpreise = []
+
+
+if Kinder == 1:
+    AlterKind = int(input("Wie alt ist Ihr Kind? "))
+    if AlterKind < 7:
+        rabatt = 100
     else:
-        rabatt=70
+        rabatt = 70
+    rabatt_pro_kind.append(rabatt)
+    preis = Zimmerpreis * aufenthalt * (1 - rabatt/100)
+    Kinderpreise.append(preis)
         
-elif Kinder>1:
+elif Kinder>1:  #Rabatte bei mehr als einem Kind
 
     for i in range(Kinder):
-        alter=int(input(f"Wie alt ist Kind {i+1}?"))
-        KinderListe.append(alter)
-    
-        rabatt = 0
-        for alter in KinderListe:
-            if alter > 7:
+        alter = int(input(f"Wie alt ist Kind {i+1}? "))
+        if alter < 7:
                 rabatt = 100
-            else:
+        else:
                 rabatt = 70
-                
-    rabatt_pro_kind.append(rabatt)   
+    rabatt_pro_kind.append(rabatt)
+    preis = Zimmerpreis * aufenthalt * (1 - rabatt/100)
+    Kinderpreise.append(preis)
     
     
-else:
+    
+    
+else:       #Rabatt ohne Kinder
     rabatt_pro_kind = []
 
 
-Gesamtpreis = (Zimmerpreis *Erwachsene) + (Zimmerpreis*Kinder) * (1 - rabattgesammt/100)
-print(Gesamtpreis)
+Erwachsenenpreis = Erwachsene * Zimmerpreis * aufenthalt
+Gesamtpreis = Erwachsenenpreis + sum(Kinderpreise)
 
-
+print(f"Der Gesamtpreis für Ihren Aufenthalt beträgt: {Gesamtpreis:.2f} Euro.")
 #Dies ist ein Test um mir mein Hirn kaputt zu machen
