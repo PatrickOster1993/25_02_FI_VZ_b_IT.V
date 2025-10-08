@@ -1,6 +1,0 @@
-TG=int(120)
-Prozentsatz=float(0.07)
-WS=(TG/100*Prozentsatz)
-print(WS)
-Gesamtkosten=(TG+WS)
-print(Gesamtkosten)

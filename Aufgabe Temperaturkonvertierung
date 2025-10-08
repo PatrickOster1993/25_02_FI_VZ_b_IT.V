@@ -1,0 +1,6 @@
+print("wie ist die temperatur in Celsius?")
+a=input()
+b=float(a)
+print(b)
+c=(b*9/5)+32
+print(c)
