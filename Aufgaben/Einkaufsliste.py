@@ -8,8 +8,10 @@ Einkaufsliste[0]="Hafermilch"
 
 print(Einkaufsliste)
 
-if "Hafermilch" in Einkaufsliste:
-    index = Einkaufsliste.index("Hafermilch")
-    Einkaufsliste[index] = "Doch Milch"
+#Extra mit if
+
+if "Hafermilch" in Einkaufsliste: # Falls Hafermilch in Liste
+    index = Einkaufsliste.index("Hafermilch") # index (Zahl) an welcher Hafermilch in Liste erkannt wird
+    Einkaufsliste[index] = "Doch Milch" # Einkaufsliste an Indexzahl mit "Doch Milch" ersetzen
     
 print(Einkaufsliste)
