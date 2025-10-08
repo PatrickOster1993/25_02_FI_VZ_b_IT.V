@@ -1,0 +1,9 @@
+benutzerprofil={"vorname":"Sebastian",
+                "nachname":"Kasper",
+                "alter":39,
+                "stadt":"Wesel"}
+#benutzerprofil_nachname=benutzerprofil["nachname"]
+print(benutzerprofil["nachname"])
+benutzerprofil["alter"]=22
+benutzerprofil["e-mail"]="sebastian.kasper@gmx.de"
+print(benutzerprofil)
