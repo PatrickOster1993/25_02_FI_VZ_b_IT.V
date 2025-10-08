@@ -3,7 +3,7 @@
 def drucke_produkt_info(produkt):
     """
     Nimmt ein Produkt-Dictionary entgegen und gibt dessen
-    Name und Lagerbestand formatiert aus. (Keine Schleife nötig)
+    Name und Lagerbestand formatiert aus.
     """
     name = produkt["name"]
     bestand = produkt["lagerbestand"]
