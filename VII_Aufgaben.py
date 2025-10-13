@@ -3,7 +3,7 @@ print("Bitte registrieren Sie sich zunächst.")
 name = input("Wie heißen Sie? ")
 passwort = input(f"Hey {name}, bitte leg jetzt ein Passwort fest: ")
 
-print("Registrierung erfolgreich! Jetzt bitte einloggen. ")
+print("Registrierung erfolgreich! Jetzt nur noch einloggen. ")
 
 login_name = input("Benutzername: ")
 login_passwort = input("Passwort: ")
