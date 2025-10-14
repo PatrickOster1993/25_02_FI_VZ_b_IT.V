@@ -29,4 +29,27 @@ if dauer == 1:
 else:
     print(f"Sie zahlen {gesammtpreis:.2f} € ")
 
+#Aufgabe VII 3
+print("Familienangebot ")
+
+zimmerpreis = 70  # Preis pro Person und Nacht
+aufenthalt = int(input("Wie viele Nächte möchten Sie bleiben? "))
+alter_kind = int(input("Wie alt ist das Kind? "))
+
+if alter_kind < 7:
+    rabatt = 100
+elif alter_kind >=18:
+    rabatt = 0
+else:
+    rabatt = 70
+
+kinderpreis = zimmerpreis * aufenthalt * (1 - rabatt / 100)
+erwachsene_preis = 2 * zimmerpreis * aufenthalt
+gesamtpreis = erwachsene_preis + kinderpreis
+
+print("Angebot ")
+print(f"Rabatt für das Kind: {rabatt}%")
+print(f"Gesamtpreis für die Familie: {gesamtpreis:.2f} €")
+
+
 
