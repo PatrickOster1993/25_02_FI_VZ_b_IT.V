@@ -5,13 +5,15 @@ passwort = input(f"Hey {name}, bitte leg jetzt ein Passwort fest: ")
 
 print("Registrierung erfolgreich! Jetzt nur noch einloggen. ")
 
-login_name = input("Benutzername: ")
-login_passwort = input("Passwort: ")
+while True:
+    login_name = input("Benutzername: ")
+    login_passwort = input("Passwort: ")
 
-if login_name == name and login_passwort == passwort:
-    print(f"Herzlich Willkommen, {name}!")
-else:
-    print("Falscher Benutzername oder Passwort!")
+    if login_name == name and login_passwort == passwort:
+        print(f"Herzlich Willkommen, {name}!")
+        break
+    else:
+        print("Falscher Benutzername oder Passwort!")
 
 #Aufgabe VII 2
 zimmerpreis=70
