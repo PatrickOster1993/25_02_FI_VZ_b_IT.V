@@ -1,5 +1,5 @@
 import random
-print("Ich möchte ein Spiel spielem :D")
+print("Ich möchte ein Spiel spielen :D")
 print("Gebe eine Zahl zwische 1 und 10 ein: ")
 try:
     input_value=int(input())
