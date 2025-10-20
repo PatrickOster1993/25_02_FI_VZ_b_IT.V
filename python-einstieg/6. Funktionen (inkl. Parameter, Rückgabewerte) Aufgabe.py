@@ -3,7 +3,11 @@
 def drucke_produkt_info(produkt):
     """
     Nimmt ein Produkt-Dictionary entgegen und gibt dessen
+<<<<<<< HEAD
     Name und Lagerbestand formatiert aus.
+=======
+    Name und Lagerbestand aus.
+>>>>>>> a38e00a (Aufgabe 6)
     """
     name = produkt["name"]
     bestand = produkt["lagerbestand"]
