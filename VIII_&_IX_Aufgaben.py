@@ -61,3 +61,17 @@ while versuche < 3:
 
 if versuche == 3:
     print("Zu viele Fehlversuche!")
+
+#IX.3_Zusatz
+zahl = int(input("Gib eine positive ganze Zahl ein: "))
+anzahl = 0
+
+if zahl == 0:
+    anzahl = 1
+else:
+    while zahl > 0:
+        zahl //= 10
+        anzahl += 1
+
+print("Die Zahl hat", anzahl, "Ziffern.")
+
