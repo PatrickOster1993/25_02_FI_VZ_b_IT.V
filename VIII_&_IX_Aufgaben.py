@@ -40,7 +40,7 @@ while True:
 
 if anzahl > 0:
     durchschnitt = summe / anzahl
-    print("Der Durchschnitt der eingegebenen Zahlen ist:", durchschnitt)
+    print(f"Der Durchschnitt ist {durchschnitt:.2f}")
 else:
     print("Es wurden keine positiven Zahlen eingegeben.")
 
