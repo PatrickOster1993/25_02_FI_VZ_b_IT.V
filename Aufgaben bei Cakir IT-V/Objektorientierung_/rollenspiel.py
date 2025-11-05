@@ -23,7 +23,7 @@ class Gladiator(Krieger):
         if self.hitpoints>70:
             print(self.name +" Nutzt seine Gladiatorfähigkeit " +self.rüstung+ "und Lebenspunkte steigen!")
         else:
-            print(self.name +" verliert trotz trotz "+ self.rüstung+ " !!!!!! ")
+            print(self.name +" verliert trotz  "+ self.rüstung+ " !!!!!! ")
 
 class Jäger:
     def __init__(self, name, hitpoints, schwäche):
