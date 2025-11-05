@@ -1,8 +1,6 @@
 class Dozent():
-    pass# das heißt dass es ok ist wenn in der runden klammer nichts steht, sonst kommt ein fehler.
-
-def get_name(Dozent):
-    print(Dozent.firstname+" "+Dozent.lastname)
+   def name(self):
+       print(f"{self.firstname} {self.lastname}")
 
 
 erdal=Dozent()#instanz und der vorgan Instanziierung
@@ -13,12 +11,36 @@ print(erdal.firstname)
 print(erdal.lastname)
 
 
-get_name(erdal)
+
 mira=Dozent()
 mira.firstname="Mira"
 mira.lastname="Cakir"
 
-print(mira.firstname)
-print(mira.lastname)
 
-get_name(mira)
+
+
+
+class Auto():
+    def name(auto):
+        print(f"{auto.bezeichnung} {auto.typ}")
+
+car=Auto()
+car.bezeichnung="Audi"
+car.typ="Sportwagen"
+
+class Smartphone():
+    def name(self):
+        print(self.bezeichnung+ " "+ self.typ)
+
+handy= Smartphone()
+handy.bezeichnung= "Samsung Galaxy S10"
+handy.typ= "Smartphone"
+handy.name()
+
+def namexmal(x):
+    x.name()
+    x.name()
+    x.name()
+namexmal(mira)
+namexmal(handy)
+namexmal(erdal)
