@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "Lernmaterialien_Unterricht",
+			"path": "../../.."
+		},
+		{
+			"name": "25_02_FI_VZ_b_IT.V",
+			"path": ".."
+		},
+		{
+			"name": "25_02_FI_VZ_b_IT.V-1",
+			"path": "../../25_02_FI_VZ_b_IT.V-1"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
