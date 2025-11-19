@@ -1,0 +1,10 @@
+{
+  "10*10": {
+    "wert": "100",
+    "gelernt_am": "2025-11-18 14:20:34"
+  },
+  "ports": {
+    "wert": "Wichtige Standardports und Dienste\t\t\t\n\t\t\t\t\n\tPort\tProtokoll\tDienst / Bedeutung\tVerschlüsselung\n\t20\tTCP\tFTP Datenübertragung\t❌ Nein\n\t21\tTCP\tFTP Steuerverbindung\t❌ Nein\n\t22\tTCP\tSSH / SFTP\t✅ Ja (SSH)\n\t23\tTCP\tTelnet\t❌ Nein\n\t25\tTCP\tSMTP (Mailversand)\t❌ Nein (STARTTLS optional)\n\t53\tTCP/UDP\tDNS\t❌ Nein (DNSSEC optional)\n\t67/68\tUDP\tDHCP\t❌ Nein\n\t69\tUDP\tTFTP\t❌ Nein\n\t80\tTCP\tHTTP\t❌ Nein\n\t110\tTCP\tPOP3 (Mail abrufen)\t❌ Nein (STARTTLS optional)\n\t143\tTCP\tIMAP (Mail abrufen)\t❌ Nein (STARTTLS optional)\n\t443\tTCP\tHTTPS\t✅ Ja (TLS/SSL)\n\t465\tTCP\tSMTP over SSL\t✅ Ja\n\t993\tTCP\tIMAP over SSL\t✅ Ja\n\t995\tTCP\tPOP3 over SSL\t✅ Ja\n\t3306\tTCP\tMySQL Datenbank\t❌ Nein\n\t3389\tTCP\tRDP (Remote Desktop)\t❌ Nein (TLS optional)\n\t137-139\tTCP/UDP\tNetBIOS\t❌ Nein\n\t445\tTCP\tSMB / CIFS\t❌ Nein (verschlüsselbar)\n\t587\tTCP\tSMTP Submission\t✅ Ja (STARTTLS)\n\t989/990\tTCP\tFTPS (FTP Secure)\t✅ Ja\n\t1194\tUDP\tOpenVPN\t✅ Ja (abhängig von Konfiguration)\n\t5060/5061\tTCP/UDP\tSIP (VoIP)\t❌ / ✅ Ja (TLS für 5061)",
+    "gelernt_am": "2025-11-18 14:22:16"
+  }
+}
