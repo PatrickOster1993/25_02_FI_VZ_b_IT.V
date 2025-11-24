@@ -1,12 +1,12 @@
 # Übung 1: Grundlegende rekursive Funktionen
 ############################################
 # a) power(a, b): Berechnet a^b
-def power(a, b):
+#def power(a, b):
     # Abbruchbedingung (anhand Skizze unten ermittelt (*)):
-    if b == 0:
-        return 1
+#    if b == 0:
+#        return 1
     # rekursiver Aufruf:
-    return a * power(a, b - 1)
+#    return a * power(a, b - 1)
     # Tiefenstruktur bei a = 2 und b = 3 (*):
         ## 1. Ebene
         ## return (2 * power(2, 2))
@@ -22,30 +22,30 @@ def power(a, b):
 
 
 # (**)
-ergebnis = power(2, 3)
-print(ergebnis)
+#ergebnis = power(2, 3)
+#print(ergebnis)
 # Wie wir das lösen wollen:
 ## 2 bleibt immer gleich bei jedem rekursiven Aufruf!
 ## Lösung: 2 * 2 * 2 (entsprich: 2^3)
 # b) reverse_string(text): dreht Text rekursiv um (Beispiel: hallo -> ollah)
-def reverse_string(text):
+#def reverse_string(text):
     # Abbruchbedingung:
-    if len(text) == 1:
-        return text
+#    if len(text) == 1:
+#        return text
     # Rekursiver Teil:
-    erstes_zeichen = text[0]
-    rest = text[1:]
+#    erstes_zeichen = text[0]
+#    rest = text[1:]
     
-    return reverse_string(rest) + erstes_zeichen
-ergebnis = reverse_string("hallo")
+#    return reverse_string(rest) + erstes_zeichen
+#ergebnis = reverse_string("hallo")
 ## Was ist rest + erstes_zeichen?
 ## allo h
 ### llo a h
 #### lo l a h
 ##### o l l a h --> zurückgeliefert
-print(ergebnis)
+#print(ergebnis)
 # main()
-ergebnis = reverse_string("hai")
+#ergebnis = reverse_string("hai")
 ## 1. Ebene
 ## return (reverse_string(ai) + h)
     ## 2. Ebene
@@ -55,22 +55,22 @@ ergebnis = reverse_string("hai")
         ## 3. Ebene gibt "i" an 2. Ebene
     ## 2. Ebene gibt "ia" an 1. Ebene
 ## 1. Ebene gibt "ia" + 1. Zeichen ("h") = "iah" an main() zurück
-print(ergebnis)
+#print(ergebnis)
 # c) count_x(text): zählt, wie oft "x" in Text vorkommt
-def count_x(text):
+#def count_x(text):
     # Abbruchbedingung:
-    if len(text) == 0:
-        return 0
+#    if len(text) == 0:
+#        return 0
     
-    else:
+#    else:
         # Rekursiver Teil:
-        erstes_zeichen = text[0]
-        rest = text[1:]
-        counter = 0
-        if erstes_zeichen == "x":
-            counter = 1
+#        erstes_zeichen = text[0]
+#        rest = text[1:]
+#        counter = 0
+#        if erstes_zeichen == "x":
+#            counter = 1
         # print(counter) -> für "Debugging + Zurückverfolgung"
-        return counter + count_x(rest)
+#        return counter + count_x(rest)
 # Beispiel "hexe":
 # return 0 + count_x(exe)
 ## return 0 + 0 + count_(xe)
@@ -80,11 +80,11 @@ def count_x(text):
 # -> oberste Ebene erhält (0 + 0 + 1 + 0 + 0) als Ergebnis -> entspricht 1
 
 # main():
-ergebnis = count_x("hexe")
-print(ergebnis)
+#ergebnis = count_x("hexe")
+#print(ergebnis)
 
 
-print("=======================================================")
+#print("=======================================================")
 
 
 
@@ -159,7 +159,7 @@ print("=========================================================================
 
 def is_palindrome(text):
     if len(text)== 0:
-        return ("Ist ein Palindrome")
+        return "Ist ein Palindrome"
     
 
    
@@ -167,7 +167,7 @@ def is_palindrome(text):
     
 
     if text[0] != text[-1]:
-        return print("Ist kein Palindrom")
+        return "Ist kein Palindrom"
     return is_palindrome(text[1:-1])
 
 ergebnis=is_palindrome("lagerregal")
@@ -176,3 +176,55 @@ print(ergebnis)
    
 
 
+print("=========================================================================================")
+
+
+# Aufgabe 1: Art "Quersumme" berechnen:
+ 
+## 127 -> Quersumme = 1 + 2 + 7 = 10
+ 
+def sum_digits(n):
+ 
+    ziffern_vorne = n // 10
+    ziffer_hinten = n % 10
+ 
+    # ohne "Special-Operatoren":
+    # ziffern_vorne = int(n / 10)
+    # ziffer_hinten = n - 10 * ziffern_vorne
+ 
+    # Abbruchbedingung:
+    if ziffern_vorne == 0:
+        return ziffer_hinten
+ 
+    # Rekursiver Anteil:
+    return ziffer_hinten + sum_digits(ziffern_vorne)
+    
+# Aufskizziert (von übergeordneter Funktion bis untergeordneter Funktion UND wieder zurück!):
+## return (3 + sum_digits(89))
+    ## return (3 + return(9 + sum_digits(8)))
+        ## return (3 + return( 9 + return(8))) = return 3 + 9 + 8 = return 20
+        ## 8
+    ## 8 + 9
+## 17 + 3
+ 
+# Beispiel = 893
+## 893 -> 8 + 9 + 3
+## (*) hilft uns, die letzte Ziffer zu bekommen -> 893 % 10 = 3
+## (**)
+ 
+# Exkurs "%-Operator" (*)
+## 893 % 10 = 893 / 10 -> Ergebnis = Rest = 3
+## 127 % 10 = 127 / 10 -> Ergebnis = Rest = 7
+## usw...
+ 
+# Exkurs "//-Operator" (**)
+## 893 // 10 = 893 / 10 -> Ergebnis = 89 OHNE Rest
+## usw...
+ 
+## Beweis:
+# print(f"893 % 10 = {893%10}") # (*)
+# print(f"127 // 10 = {127//10}") # (**)
+ 
+zahl = 111
+ergebnis = sum_digits(zahl)
+print("Quersumme:", ergebnis)
